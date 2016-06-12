@@ -46,7 +46,7 @@ while ifconfig rai0 | grep Device; do sleep 1;done
 iwpriv rai0 set VgaClamp=`uci -q get platform.@vgaclamp[0].rai0`
 ##############/clamp ################
 
-if ! [ "$RELOAD" == "true" ]; then
+if ! [ "$RELOAD" == "true" ]; then #first start
         sleep 10 # wait a little bit
 fi
 
